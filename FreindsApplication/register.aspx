@@ -68,6 +68,15 @@
 										Display="Dynamic"
 										runat="server"
 										CssClass="invalid-feedback"/>
+									
+								    <asp:RegularExpressionValidator
+									        ID="RegularExpressionValidator2"
+									        ControlToValidate="password"
+									        ErrorMessage="Password must contain minimum 8 characters, at least one letter, one number and one special character."
+								                ValidationExpression="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"
+									        Display="Dynamic"
+									        runat="server"
+									        CssClass="invalid-feedback"/>
 								</div>
 
 								<div class="mb-3">
